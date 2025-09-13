@@ -3,21 +3,73 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EcoFuego / Rusty — Coming soon</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;display:grid;place-items:center;min-height:100vh;background:#0f172a;color:#e2e8f0}
-    .card{max-width:720px;padding:28px;border-radius:16px;background:#111827;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    h1{margin:0 0 12px;font-size:28px}
-    p{margin:8px 0 0;line-height:1.6}
-    a{color:#60a5fa;text-decoration:none}
-    a:hover{text-decoration:underline}
-  </style>
+  <title>Hack in 90 seconden — Kort. Krachtig. Relevant.</title>
+  <meta name="description" content="Cybersecurity simpel uitgelegd in 90 seconden. Kort. Krachtig. Relevant. Elke week een nieuwe hack of incident, zonder jargon." />
+  <link rel="icon" href="/assets/img/favicon.ico" />
+  <meta property="og:title" content="Hack in 90 seconden" />
+  <meta property="og:description" content="Cybersecurity simpel uitgelegd in 90 seconden." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.peterhendriks.me" />
+  <meta name="theme-color" content="#0B1220" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="card">
-    <h1>Hallo 👋</h1>
-    <p>Dit is een ultralichte statische site op GitHub Pages.</p>
-    <p>Plaats hier je tekst, een logo (<code>/assets/logo.png</code>) en links naar je socials.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">Hack in 90 seconden</a>
+      <nav class="nav">
+        <a href="#afleveringen">Afleveringen</a>
+        <a href="#over">Over</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Kort. Krachtig. Relevant.</h1>
+      <p>Cybersecurity simpel uitgelegd — in 90 seconden per aflevering.</p>
+      <div class="cta-row">
+        <input id="search" class="search" type="search" placeholder="Zoek op onderwerp (bv. ransomware, NSA, phishing)..." />
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="afleveringen">
+      <h2>Afleveringen</h2>
+      <div id="tags" class="tags"></div>
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty hidden">Geen resultaten. Probeer een andere zoekterm of tag.</div>
+    </section>
+
+    <section id="over" class="over">
+      <h2>Over</h2>
+      <p><strong>Hack in 90 seconden</strong> maakt cyber simpel. Zonder poeha, zonder jargon. 
+      Elke week een case: wat is er gebeurd, waarom boeit het, en wat kun jij morgen anders doen?</p>
+      <ul class="bullets">
+        <li><strong>Kort:</strong> max 90 seconden per aflevering.</li>
+        <li><strong>Krachtig:</strong> de essentie, geen fluff.</li>
+        <li><strong>Relevant:</strong> lessen die je direct kunt toepassen.</li>
+      </ul>
+      <p>Volg voor nieuwe afleveringen: 
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/peter-hendriks/">LinkedIn</a> · 
+        <a target="_blank" rel="noopener" href="https://tiktok.com/">TikTok</a>
+      </p>
+    </section>
   </main>
+
+  <!-- Modal voor aflevering -->
+  <dialog id="modal" class="modal">
+    <button class="close" id="closeModal" aria-label="Sluiten">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Hack in 90 seconden · Gemaakt door Peter</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
