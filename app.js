@@ -109,13 +109,3 @@ function render(){
 
 search.addEventListener("input", render);
 render();
-
-// Over modal
-const overModal = document.getElementById("overModal");
-const openOver = document.getElementById("openOver");
-const closeOver = document.getElementById("closeOver");
-
-openOver.addEventListener("click", () => overModal.showModal());
-closeOver.addEventListener("click", () => overModal.close());
-overModal.addEventListener("click", e => { if(e.target === overModal) overModal.close(); });
-
