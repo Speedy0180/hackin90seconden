@@ -19,7 +19,7 @@
       <a class="brand" href="/">Hack in 90 seconden</a>
       <nav class="nav">
         <a href="#afleveringen">Afleveringen</a>
-        <a href="#over">Over</a>
+        <button id="openOver" class="linklike">Over</button>
       </nav>
     </div>
   </header>
@@ -71,5 +71,20 @@
   </footer>
 
   <script src="app.js"></script>
+<dialog id="overModal" class="modal">
+  <button class="close" id="closeOver" aria-label="Sluiten">×</button>
+  <div class="modal-content">
+    <h2>Over Hack in 90 seconden</h2>
+    <p>Kort. Krachtig. Relevant. Cybersecurity simpel uitgelegd in 90 seconden. 
+    Elke week een hack of incident, met de kern uitgelegd zonder jargon.</p>
+    <ul>
+      <li><strong>Kort:</strong> max 90 seconden</li>
+      <li><strong>Krachtig:</strong> de essentie, geen fluff</li>
+      <li><strong>Relevant:</strong> lessen die je direct kunt toepassen</li>
+    </ul>
+  </div>
+</dialog>
+  
+
 </body>
 </html>
